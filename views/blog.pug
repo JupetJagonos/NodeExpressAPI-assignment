@@ -1,0 +1,10 @@
+extends layouts/layout
+
+block content
+  section
+    h2 Blog Posts
+    each post in blogPosts
+      article
+        h3= post.title
+        p= post.content
+        small Posted by: #{post.author} on #{post.date.toDateString()}

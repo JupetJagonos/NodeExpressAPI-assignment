@@ -1,0 +1,16 @@
+extends layouts/layout
+
+block content
+  section
+    h2 Add New Service
+    form(action='/services/add', method='POST')
+      label(for='name') Service Name:
+      input(type='text', id='name', name='name', required)
+
+      label(for='description') Description:
+      textarea(id='description', name='description', required)
+
+      label(for='price') Price:
+      input(type='text', id='price', name='price', required)
+
+      button(type='submit') Add Service

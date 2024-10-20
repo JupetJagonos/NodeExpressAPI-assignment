@@ -1,0 +1,22 @@
+extends layouts/layout
+
+block content
+  section
+    h2 Add New Photo
+    form(action='/photos/add', method='POST')
+      label(for='title') Title:
+      input(type='text', id='title', name='title', required)
+
+      label(for='description') Description:
+      textarea(id='description', name='description', required)
+
+      label(for='image') Image URL:
+      input(type='text', id='image', name='image', required)
+
+      label(for='category') Category:
+      select(id='category', name='category', required)
+        option(value='wedding') Wedding
+        option(value='concert') Concert
+        option(value='street') Street
+
+      button(type='submit') Add Photo

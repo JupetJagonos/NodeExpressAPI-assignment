@@ -1,0 +1,11 @@
+extends layouts/layout
+
+block content
+  section
+    h2 Our Services
+    each service in services
+      div.service
+        h3= service.name
+        p= service.description
+        p Price: #{service.price}
+    a(href='/addService') Add New Service 

@@ -1,0 +1,221 @@
+/* Global Styles */
+body {
+    font-family: 'Helvetica', sans-serif; /* Use Helvetica as the default font */
+    color: #333; /* General text color */
+    background-image: url('/images/image1.jpg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent repetition of the background image */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Increase line spacing for readability */
+}
+
+/* Centering Elements */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    min-height: 100vh; /* Full height */
+    text-align: center; /* Center text */
+}
+
+/* Blurred Background Overlay for Content */
+.content-overlay {
+    background-color: rgba(227, 228, 224, 0.65); /* Adjust the opacity value to 0.65 for more transparency */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    border-radius: 8px; /* Rounded corners for the overlay */
+    padding: 20px; /* Padding inside the container */
+    max-width: 600px; /* Limit width for readability */
+    width: 90%; /* Responsive width */
+    margin: 20px auto; /* Center the overlay with margin */
+}
+
+/* Header Styles */
+header {
+    margin-top: 20px; /* Space above the header */
+}
+
+/* Title Styles */
+h1 {
+    font-size: 30px; /* Title size */
+    font-weight: bold; /* Bold title */
+    color: #7F867B; /* Matcha color */
+    margin: 20px 0; /* Space around title */
+    text-decoration: none; /* Ensure no underline */
+}
+
+/* Make the header link to the homepage */
+header a {
+    text-decoration: none; /* Remove underline from header link */
+}
+
+/* Subtitle Styles */
+h2 {
+    font-size: 18px; /* Subtitle size */
+    font-style: italic; /* Italic style */
+    font-family: 'Times New Roman', serif; /* Times font */
+    margin: 5px 0; /* Reduce space around subtitle */
+}
+
+/* Description Section */
+.description {
+    font-family: 'Courier New', Courier, monospace; /* Use Courier for description */
+    font-size: 16px; /* Description text size */
+    max-width: 600px; /* Limit width for readability */
+    margin: 20px auto; /* Center the description */
+    padding: 0 20px; /* Padding for mobile devices */
+}
+
+/* Button Container Styles */
+.button-container {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between the buttons */
+    margin-top: 20px; /* Space above the button container */
+}
+
+/* Link Styles to Look Like Buttons */
+.button-container a {
+    display: inline-block; /* Display links as block elements */
+    background-color: #7F867B; /* Matcha background */
+    color: white; /* White text */
+    padding: 10px 15px; /* Padding inside buttons */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from links */
+    transition: background-color 0.3s; /* Smooth background transition on hover */
+}
+
+.button-container a:hover {
+    background-color: #6B7A6E; /* Darker shade on hover */
+}
+
+/* Admin Page Styles */
+.admin-container {
+    background-color: #E3E4E0; /* Linen color for admin pages */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the container */
+    margin: 20px; /* Margin around the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Input Styles */
+input,
+textarea,
+select {
+    width: 100%; /* Full-width inputs */
+    margin: 10px 0; /* Space around inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #7F867B; /* Matcha border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Button Styles */
+button {
+    background-color: #7F867B; /* Matcha background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #6B7A6E; /* Darker shade on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px; /* Reduce title size on smaller screens */
+    }
+
+    h2 {
+        font-size: 16px; /* Adjust subtitle size */
+    }
+
+    .description {
+        font-size: 14px; /* Smaller font for description on mobile */
+    }
+
+    /* Adjust button styles for smaller screens */
+    .button-container a {
+        padding: 8px 12px; /* Smaller padding on mobile */
+        font-size: 14px; /* Adjust font size for buttons */
+    }
+}
+
+
+/* Portfolio Section Styles */
+.portfolio-section {
+    padding: 30px 20px; /* Add padding to the section */
+    background-color: #f0f0f0; /* Light background color for contrast */
+}
+
+/* Container for Photos */
+.photo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between photos */
+    margin-top: 20px;
+}
+
+/* Photo Styles */
+.photo {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    overflow: hidden; /* Round borders for children */
+    max-width: 300px;
+    flex: 1 1 calc(33.333% - 40px); /* Responsive with 3 photos per row with gap compensation */
+    margin-bottom: 20px; /* Space below the photo block */
+    display: flex;
+    flex-direction: column; /* Ensure content stacks vertically */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.photo:hover {
+    transform: scale(1.05); /* Slight scale-up on hover */
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #e0e0e0; /* Divider between image and text */
+}
+
+/* Details Under Each Photo */
+.photo-details {
+    padding: 10px 15px; /* Padding inside details section */
+}
+
+.photo-details h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 0 0 10px;
+}
+
+.photo-details p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .photo-container {
+        gap: 10px; /* Reduce gap on smaller screens */
+    }
+
+    .photo {
+        flex: 1 1 calc(50% - 20px); /* 2 photos per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .photo {
+        flex: 1 1 100%; /* Single photo per row on extra small screens */
+    }
+}

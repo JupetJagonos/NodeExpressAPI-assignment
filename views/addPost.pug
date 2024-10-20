@@ -1,0 +1,16 @@
+extends layouts/layout
+
+block content
+  section
+    h2 Add New Blog Post
+    form(action='/blog/add', method='POST')
+      label(for='title') Title:
+      input(type='text', id='title', name='title', required)
+
+      label(for='content') Content:
+      textarea(id='content', name='content', required)
+
+      label(for='author') Author:
+      input(type='text', id='author', name='author', required)
+
+      button(type='submit') Add Blog Post

@@ -1,0 +1,12 @@
+extends layouts/layout
+
+block content
+  section.portfolio-section
+    h2 Portfolio
+    .photo-container
+      each photo in photos
+        div.photo
+          img(src=`/${photo.image}`, alt=`${photo.title}`)
+          div.photo-details
+            h3= photo.title
+            p= photo.description
